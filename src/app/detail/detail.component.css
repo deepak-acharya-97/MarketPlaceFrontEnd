@@ -1,0 +1,28 @@
+mat-grid-tile {
+    /* background: lemonchiffon; */
+}
+mat-grid-list {
+    margin-top: 10px;
+}
+/* img {
+    display: block;
+    height: 200px;
+    width: 200px;
+} */
+img {
+    height: 70%;
+
+}
+.example-card {
+    /* max-width: 900px; */
+    width: 50%;
+    height: 50%;
+    /* background: lightblue; */
+}
+.example-header-image {
+    /* background: lightblue; */
+    background-size: cover;
+}
+#cover-width {
+    width: 100%;
+}

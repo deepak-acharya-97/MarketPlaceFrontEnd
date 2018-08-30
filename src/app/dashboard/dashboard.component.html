@@ -1,0 +1,46 @@
+<!-- <p>
+  dashboard works!
+</p>
+<button mat-button color="primary" >Edit</button>
+<button mat-button color="warn">Delete</button> -->
+<mat-toolbar>List Of Available Integration Services</mat-toolbar>
+
+<mat-grid-list cols="3" rowHeight="400px"  *ngIf="applications">
+  <mat-grid-tile *ngFor="let app of applications">
+    <!-- <img mat-card-image src="https://studyguide.itu.dk/~/media/studyguide/student-life/facilities-at-itu/it-facilities/github/github_logo.png?h=248&w=573&la=en" alt="Photo of a Shiba Inu"/>
+    <mat-card-footer>Hi</mat-card-footer> -->
+    <mat-card class="example-card">
+        <mat-card-header>
+          <!-- <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+        </mat-card-header>
+        <img mat-card-image [src]="app.logoUrl" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <!-- <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
+          </p> -->
+        </mat-card-content>
+        <mat-card-actions>
+          <button (click)="getDetails(app.id)" id="cover-width" mat-button>{{app.name}}</button>
+        </mat-card-actions>
+      </mat-card>
+  </mat-grid-tile>
+  <!-- <mat-grid-tile>
+      <mat-card class="example-card">
+          <mat-card-header>
+            
+          </mat-card-header>
+          <img mat-card-image src="https://www.gstatic.com/images/branding/product/1x/drive_512dp.png" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            
+          </mat-card-content>
+          <mat-card-actions>
+            <button id="cover-width" mat-button>Google Drive</button>
+          </mat-card-actions>
+        </mat-card>
+  </mat-grid-tile> -->
+  <!-- <mat-grid-tile>Twitter</mat-grid-tile> -->
+</mat-grid-list>

@@ -1,0 +1,36 @@
+<mat-toolbar>TL;DM Marketplace</mat-toolbar>
+
+<mat-grid-list cols="5" rowHeight="630px">
+  <mat-grid-tile colspan="2" *ngIf="application">
+    <!-- <img mat-card-image src="https://studyguide.itu.dk/~/media/studyguide/student-life/facilities-at-itu/it-facilities/github/github_logo.png?h=248&w=573&la=en" alt="Photo of a Shiba Inu"/>
+          <mat-card-footer>Hi</mat-card-footer> -->
+    <mat-card class="example-card">
+      <mat-card-header>
+        <!-- <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Shiba Inu</mat-card-title>
+                <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+      </mat-card-header>
+      <img mat-card-image [src]="application.logoUrl" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <!-- <p>
+                  The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                  A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                  bred for hunting.
+                </p> -->
+      </mat-card-content>
+      <mat-card-actions>
+          <a [href]="application.appUrl"><button id="cover-width" mat-button>{{ application.name }} Home Page</button></a>
+          <button id="cover-width" mat-button> Install</button>
+        </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="3">
+      <mat-list>
+          <mat-list-item><b>Name : </b>{{application.name}}</mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item><b>Description : </b>{{ application.info }}</mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item><b>Developer : </b>{{ application.developer }}</mat-list-item>
+        </mat-list>
+  </mat-grid-tile>
+</mat-grid-list>
